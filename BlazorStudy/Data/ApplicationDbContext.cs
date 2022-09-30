@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using BlazorStudy.Models.Buffets;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlazorStudy.Data
@@ -9,5 +10,9 @@ namespace BlazorStudy.Data
             : base(options)
         {
         }
+
+        public DbSet<Broth>? Broths { get; set; }
+        public DbSet<Noodle>? Noodles { get; set; }
+        public DbSet<Garnish>? Garnishes { get; set; }
     }
 }
